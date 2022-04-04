@@ -1,0 +1,10 @@
+# ignore all
+*
+#unignore all with extension
+!*.*
+# unignore all dirs
+!*/
+# ignore extension
+__pycache__
+*.pth
+*.pt
