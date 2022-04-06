@@ -60,8 +60,8 @@ try:
             if timestep <=80:
                 golds = rule_based.gold_divide(golds, minerEnv, golds_amount)
             golds_caution = golds.copy()
-            action = rulebase.no_craft_gold2(golds)
-            #action, _ = policy.predict_action(s) # Getting an action from the trained model
+            #action = rulebase.no_craft_gold2(golds)
+            action, _ = policy.predict_action(s) # Getting an action from the trained model
             if action == 5 and minerEnv.state.mapInfo.gold_amount(minerEnv.state.x, minerEnv.state.y) <=0:
                 #action = 4
                 action = rulebase.no_craft_gold2(golds)
